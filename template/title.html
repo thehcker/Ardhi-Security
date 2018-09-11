@@ -5,10 +5,11 @@
 	<title>My Titledeed</title>
 </head>
 <body>
-<div class="row">
-  <div class="col-md-4">
+
 {% block two %}
 
+<div class="row">
+  <div class='col-md-4 col-md-offset-4'>
 <table border="1px solid red">
   <tr>
     <th>owners name</th>
@@ -25,8 +26,9 @@
   </tr>
   {%  endfor %}
   {% endblock %}
-</table>
   </div>
 </div>
+</table>
+  
 </body>
 </html>

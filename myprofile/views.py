@@ -45,7 +45,6 @@ def Deed(request):
 		ref_no = ref_no,
 		demographic = demographic,
 		size = size,
-		date = date
 		)
 	title.save()
 	return redirect('title')

@@ -15,7 +15,9 @@
           {% url 'index' as index %}
           {% url 'home' as home %}
           {% url 'about' as about %}
+          {% url 'contact' as contact %}
           {% url 'title' as title %}
+          {% url 'titledeed' as titledeed %}
         
           <!--{% url 'contact' as contact %}
           {% url 'logo' as logo %}
@@ -25,13 +27,15 @@
               {% else %}
             <li {% if request.path == home %} class="active" {% endif %} ><a href="{% url 'home' %}">Home</a></li>
             <li {% if request.path == about %} class="active" {% endif %} ><a href="{% url 'about' %}">About</a></li>
+            <li {% if request.path == contact %} class="active" {% endif %} ><a href="{% url 'contact' %}">Contact</a></li>
+            <li {% if request.path == titledeed %} class="active" {% endif %} ><a href="{% url 'titledeed' %}">Form</a></li>
              <li {% if request.path == title %} class="active" {% endif %} ><a href="{% url 'title' %}">Ledger</a></li>
               {% endif %}
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
               {% if not request.user.is_authenticated %}
-                <li><a href="{% url 'account_login' %}">Log In</a></li>
+                <li><a href="{% url 'index' %}">Log In</a></li>
                 <li><a href="{% url 'account_signup' %}">SignUp</a></li>
               {% else %}
                 <li><a href="{% url 'account_logout' %}">Log Out</a></li>
