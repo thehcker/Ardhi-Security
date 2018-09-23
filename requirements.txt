@@ -30,4 +30,4 @@ six==1.10.0
 sorl-thumbnail==12.3
 whitenoise==3.3.1
 wsgiref==0.1.2
-django-flatpages-tinymce==19.4.1
+django-flatpages-tinymce==19.5.0
