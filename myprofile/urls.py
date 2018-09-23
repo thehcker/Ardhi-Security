@@ -16,6 +16,9 @@ urlpatterns = [
     path('deed/', views.Deed, name='deed'),
     path('title/', views.title, name='title'),
     path('index/', views.index, name='index'),
+    path('newperson/', views.newperson, name='newperson'),
+    path('people/', views.people, name='people'),
+    #path('upload/', views.upload, name='upload'),
 
 ]
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
-from myprofile.models import titledeed
-
+from myprofile.models import titledeed,Person
+from myprofile.forms import Personform
 # Create your views here.
 def home(request):
 	context = locals()
@@ -53,3 +53,24 @@ def title(request):
 	title = titledeed.objects.all()
 	template = 'title.html'
 	return render(request,template,{"Title":title})
+
+def newperson(request):
+	if request.method =="POST":
+		form = Personform(request.POST or None)
+		if form.is_valid():
+			form.save()
+		return redirect("people")
+
+	    
+	else:
+	   form = Personform()
+	return render (request, 'newperson.html',{'form':form})
+
+
+def people(request):
+	people= Person.objects.all()
+	return render (request, 'people.html',{'people':people})
+
+	
+
+	

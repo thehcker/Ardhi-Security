@@ -12,22 +12,19 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-          {% url 'index' as index %}
+          <!--{% url 'index' as index %}-->
           {% url 'home' as home %}
           {% url 'about' as about %}
           {% url 'contact' as contact %}
           {% url 'title' as title %}
           {% url 'titledeed' as titledeed %}
         
-          <!--{% url 'contact' as contact %}
-          {% url 'logo' as logo %}
-          {% url 'profile' as profile %}-->
             {% if not request.user.is_authenticated %}
-            <li {% if request.path == index %} class="active" {% endif %} ><a href="{% url 'index' %}">Login</a></li>
-              {% else %}
+            <!--<li {% if request.path == index %} class="active" {% endif %} ><a href="{% url 'index' %}">Login</a></li>-->
             <li {% if request.path == home %} class="active" {% endif %} ><a href="{% url 'home' %}">Home</a></li>
             <li {% if request.path == about %} class="active" {% endif %} ><a href="{% url 'about' %}">About</a></li>
             <li {% if request.path == contact %} class="active" {% endif %} ><a href="{% url 'contact' %}">Contact</a></li>
+            {% else %}
             <li {% if request.path == titledeed %} class="active" {% endif %} ><a href="{% url 'titledeed' %}">Form</a></li>
              <li {% if request.path == title %} class="active" {% endif %} ><a href="{% url 'title' %}">Ledger</a></li>
               {% endif %}

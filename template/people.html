@@ -1,0 +1,12 @@
+<table width ="100px" cellpadding="2" border="2px doted red">
+  <tr>
+    <th>Name</th>
+    <th>Image</th> 
+  </tr>
+  {% for i in people %}
+  <tr>
+    <td>{{ i.name }}</td>
+    <td><img src="{{ i.picture.url }}"></td> 
+  </tr>
+  {%  endfor %}
+</table>
