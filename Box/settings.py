@@ -28,7 +28,6 @@ SECRET_KEY = '*da#+)uenlo9eg@ln*=#@ob2#fye^qudjci70uuvhc6zylil@-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-DISABLE_COLLECTSTATIC=1
 
 ALLOWED_HOSTS = []
 
