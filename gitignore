@@ -1,5 +1,5 @@
 venv
-*.pyc.argv
-staticfiles
+*.pyc
+static
 .env
 db.sqlite3
