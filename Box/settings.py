@@ -158,7 +158,7 @@ if DEBUG:
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 heroku addons:create heroku-postgresql:hobby-dev
-heroku config:set DISABLE_COLLECTSTATIC=1
+heroku config:set DEBUG_COLLECTSTATIC=1
 
 SITE_ID = 1
 
